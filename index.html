@@ -29,7 +29,7 @@
         function showPosition(position) {
             var latlon = position.coords.latitude + "," + position.coords.longitude;
 
-            var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+latlon+" & zoom=14 & size=400x300 & sensor=false & key=AIzaSyDpvi3g0IfJgXnAvlnb5XomGz4FZDPOfsY";
+            var img_url = "https://maps.googleapis.com/maps/api/js?key==AIzaSyDpvi3g0IfJgXnAvlnb5XomGz4FZDPOfsY";
 
             document.getElementById("mapholder").innerHTML = "<img src='" + img_url + "'>";
         }
