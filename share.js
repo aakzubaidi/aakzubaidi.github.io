@@ -1,4 +1,4 @@
-var shareButton = document.getElementById('share-button');
+var shareButton = document.getElementById('shareLocation');
 
 shareButton.addEventListener('click', function () {
 

@@ -111,37 +111,8 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpvi3g0IfJgXnAvlnb5XomGz4FZDPOfsY&callback=initMap">
         </script>
 
-    <script>
-        function share(position) {
-            var shareButton = document.getElementById('shareLocation');
+    <script src='share.js'></script>
 
-            shareButton.addEventListener('click', function () {
-
-                // Check if navigator.share is supported by the browser
-                if (navigator.share) {
-                    console.log("متصفحك يدعم المشاركة مع التطبيقات الأخرى")
-
-                    // navigator.share accepts objects which must have atleast title, text or
-                    // url. Any text or title or text is possible
-                    navigator.share({
-                        title: "Bits and pieces: Web Share API article",
-                        text: "Web Share API feature is awesome. You must check it",
-                        url: window.location.href
-                    })
-                        .then(function () {
-                            console.log("تمت المشاركة بنجاح")
-                        })
-                        .catch(function () {
-                            console.log("فشلت المشاركة")
-                        })
-
-                } else {
-                    console.log("متصفحك لا يدعم المشاركة مع التطبيقات الأخرى")
-                }
-            })
-        }
-
-    </script>
 </body>
 
 </html>
