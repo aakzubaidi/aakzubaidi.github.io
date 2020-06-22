@@ -9,9 +9,9 @@ shareButton.addEventListener('click', function () {
         // navigator.share accepts objects which must have atleast title, text or
         // url. Any text or title or text is possible
         navigator.share({
-                title: "Bits and pieces: Web Share API article",
-                text: "Web Share API feature is awesome. You must check it",
-                url: window.location.href
+                title: "مشاركة عنوان موقع",
+                text: "قم بالضغط على الرابط لإظهار العنوان على الخريطة",
+                url: QRurl
             })
             .then(function () {
                 console.log("Shareing successfull")
