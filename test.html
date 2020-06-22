@@ -1,0 +1,26 @@
+<html>
+<title>
+    Web Share API
+</title>
+
+<body>
+    <div>
+        <input type="text" placeholder="Enter text you wanna share" id="title" />
+        <button onclick="share">Share</button>
+    </div>
+</body>
+<script>
+    function share() {
+        if (navigator.share) {
+            navigator.share({
+                    text: text.value
+                })
+                .then(() => console.log('Successful share'))
+                .catch((error) => console.log('Error sharing', error));
+        } else {
+            console.log("Web Share API is not supported in your browser.")
+        }
+    }
+</script>
+
+</html>
