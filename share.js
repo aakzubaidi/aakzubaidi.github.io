@@ -9,7 +9,7 @@ shareButton.addEventListener('click', function () {
         // url. Any text or title or text is possible
         navigator.share({
                 title: "مشاركة عنوان موقع",
-                text: "قم بالضغط على الرابط لإظهار العنوان على الخريطة",
+                text: "قم بالضغط على الرابط لإظهار الباركود ",
                 url: MapURL
             })
             .then(function () {
