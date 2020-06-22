@@ -119,22 +119,22 @@
 
                 // Check if navigator.share is supported by the browser
                 if (navigator.share) {
-                    console.log("Congrats! Your browser supports Web Share API")
+                    console.log("متصفحك يدعم المشاركة مع التطبيقات الأخرى")
 
                     // navigator.share accepts objects which must have atleast title, text or
                     // url. Any text or title or text is possible
                     navigator.share({
-                        url: QRurl
+                        url: window.location.href
                     })
                         .then(function () {
-                            console.log("Shareing successfull")
+                            console.log("تمت المشاركة بنجاح")
                         })
                         .catch(function () {
-                            console.log("Sharing failed")
+                            console.log("فشلت المشاركة")
                         })
 
                 } else {
-                    console.log("Sorry! Your browser does not support Web Share API")
+                    console.log("متصفحك لا يدعم المشاركة مع التطبيقات الأخرى")
                 }
             })
         }
