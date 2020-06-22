@@ -1,4 +1,4 @@
-var shareButton = document.getElementById('shareLocation');
+var shareButton = document.getElementById('shareLocationBC');
 
 shareButton.addEventListener('click', function () {
     // Check if navigator.share is supported by the browser
@@ -8,9 +8,9 @@ shareButton.addEventListener('click', function () {
         // navigator.share accepts objects which must have atleast title, text or
         // url. Any text or title or text is possible
         navigator.share({
-                title: "مشاركة عنوان موقع",
+                title: "مشاركة باردكود عنوان موقع",
                 text: "قم بالضغط على الرابط لإظهار الباركود ",
-                url: MapURL
+                url: QRurl
             })
             .then(function () {
                 console.log("Shareing successfull")
@@ -21,6 +21,6 @@ shareButton.addEventListener('click', function () {
 
     } else {
         console.log("Sorry! Your browser does not support Web Share API")
-        console.log("الرابط هو"+MapURL)
+        console.log("الرابط هو"+QRurl)
     }
 })
