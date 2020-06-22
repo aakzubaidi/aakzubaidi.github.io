@@ -1,7 +1,6 @@
 var shareButton = document.getElementById('shareLocation');
 
 shareButton.addEventListener('click', function () {
-
     // Check if navigator.share is supported by the browser
     if (navigator.share) {
         console.log("Congrats! Your browser supports Web Share API")
@@ -11,7 +10,7 @@ shareButton.addEventListener('click', function () {
         navigator.share({
                 title: "مشاركة عنوان موقع",
                 text: "قم بالضغط على الرابط لإظهار العنوان على الخريطة",
-                url: QRurl
+                url: MapURL
             })
             .then(function () {
                 console.log("Shareing successfull")
@@ -22,5 +21,6 @@ shareButton.addEventListener('click', function () {
 
     } else {
         console.log("Sorry! Your browser does not support Web Share API")
+        console.log("الرابط هو"+MapURL)
     }
 })
